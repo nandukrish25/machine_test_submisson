@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{request.get_full_path}}" method="POST">
+        {%csrf_token%}
+        <label for="name">Name:</label><br>
+        {{form.name}}<br><br>
+        <label for="country">Country:</label><br>
+        {{form.country}}<br><br>
+        <label for="nationality">Nationality:</label><br>
+        {{form.nationality}}<br><br>
+        <label for="mobile">Mobile Number:</label><br>
+        {{form.mobile}}<br><br>
+        <label for="role">Role (student/staff/admin/editor):</label><br>
+        {{form.role}}<br><br>
+        <label for="email">Email:</label><br>
+        {{form.email}}<br><br>
+        <label for="password">Password:</label><br>
+        {{form.password}}<br><br>
+
+        <button type="submit">Register</button>
+
+      </form>
+</body>
+</html>
